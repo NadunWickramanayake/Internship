@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Node.js CRUD App</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<h1>Node.js CRUD App</h1>
+
+<form action="/add" method="post">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+  <button type="submit">Add User</button>
+</form>
+
+<table>
+  <thead>
+    <tr>
+      <th>subject_id</th>
+      <th>Year</th>
+      <th>Subject</th>
+      <th>Comments</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% subjects.forEach(subjects => { %>
+      <tr>
+        <td><%= subjects.subject_id %></td>
+        <td><%= subjects.Year %></td>
+        <td><%= subjects.Subject %></td>
+        <td><%= subjects.Comments %></td>
+        
+        
+      </tr>
+    <% }); %>
+  </tbody>
+</table>
+
+</body>
+</html>
+

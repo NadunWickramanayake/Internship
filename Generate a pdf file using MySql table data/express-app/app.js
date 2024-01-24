@@ -9,7 +9,7 @@ const pool = mysql.createPool({
   host: 'localhost',
   user: 'root',
   password: '',
-  database: 'generate_pdf',
+  database: 'time_table',
 });
 
 // Set the view engine to EJS
@@ -17,7 +17,7 @@ app.set('view engine', 'ejs');
 
 // Route to fetch data from the database and render it in an HTML table
 app.get('/', (req, res) => {
-  const sqlQuery = 'SELECT * FROM students_marks';
+  const sqlQuery = 'SELECT * FROM teacher';
 
   pool.query(sqlQuery, (error, results) => {
     if (error) {

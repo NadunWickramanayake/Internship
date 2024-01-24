@@ -27,32 +27,23 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>Student ID</th>
-                            <th>Student Name</th>
-                            <th>Department</th>
-                            <th>OOP Programming</th>
-                            <th>Server Side Web Development</th>
+                            <th>Teacher ID</th>
+                            <th>Teacher</th>
+                            <th>Comments</th>
                         </tr>
                     </thead>
                     <tbody>
                         <% tableData.forEach(function(data) { %>
                             <tr>
                                 <td>
-                                    <%= data.studentId %>
+                                    <%= data.teacher_id %>
                                 </td>
                                 <td>
-                                    <%= data.studentName %>
+                                    <%= data.Teacher %>
                                 </td>
                                 <td>
-                                    <%= data.department %>
+                                    <%= data.Comments %>
                                 </td>
-                                <td>
-                                    <%= data.oopProgramming %>
-                                </td>
-                                <td>
-                                    <%= data.serverSideWebDevelopment %>
-                                </td>
-                            </tr>
                             <% }); %>
                     </tbody>
                 </table>
